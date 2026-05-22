@@ -1,0 +1,51 @@
+<section class="section section-alt" id="organizers">
+  <div class="container">
+    <h2 class="section-title">Organizers</h2>
+    <p class="section-sub">Affiliations will be added as committee members confirm.</p>
+
+    {{ with site.Data.organizers.cochairs }}
+    <div class="organizer-group">
+      <h3 class="organizer-group-title">{{ .title }}</h3>
+      <ul class="organizer-list organizer-list--featured">
+        {{ range .members }}
+        <li class="organizer">
+          <div class="organizer-avatar" aria-hidden="true">{{ substr .name 0 1 }}</div>
+          <div class="organizer-info">
+            <span class="organizer-name">{{ .name }}</span>
+            {{ with .affiliation }}<span class="organizer-affil">{{ . }}</span>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ with site.Data.organizers.steering }}
+    <div class="organizer-group">
+      <h3 class="organizer-group-title">{{ .title }}</h3>
+      <ul class="organizer-list">
+        {{ range .members }}
+        <li class="organizer">
+          <span class="organizer-name">{{ .name }}</span>
+          {{ with .affiliation }}<span class="organizer-affil"> · {{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    {{ with site.Data.organizers.organizing }}
+    <div class="organizer-group">
+      <h3 class="organizer-group-title">{{ .title }}</h3>
+      <ul class="organizer-list">
+        {{ range .members }}
+        <li class="organizer">
+          <span class="organizer-name">{{ .name }}</span>
+          {{ with .affiliation }}<span class="organizer-affil"> · {{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</section>

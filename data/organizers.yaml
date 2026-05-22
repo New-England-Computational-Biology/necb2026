@@ -1,0 +1,47 @@
+cochairs:
+  title: "Conference Co-Chairs"
+  members:
+    - name: "Pedja"
+      affiliation: ""
+    - name: "Luca"
+      affiliation: ""
+    - name: "Kevin"
+      affiliation: ""
+
+steering:
+  title: "Steering Committee"
+  members:
+    - name: "Smita"
+      affiliation: ""
+    - name: "Donna"
+      affiliation: ""
+    - name: "Martha"
+      affiliation: ""
+    - name: "Olga"
+      affiliation: ""
+    - name: "Xihong"
+      affiliation: ""
+    - name: "Lucy Colwell"
+      affiliation: ""
+    - name: "Nils"
+      affiliation: ""
+
+organizing:
+  title: "Organizing Committee"
+  members:
+    - name: "Wengong"
+      affiliation: ""
+    - name: "Dmitry"
+      affiliation: ""
+    - name: "Ben Gyori"
+      affiliation: ""
+    - name: "Ignacio Vazquez"
+      affiliation: ""
+    - name: "Ying Ma"
+      affiliation: ""
+    - name: "Jeremy Simon"
+      affiliation: ""
+    - name: "Heng Li"
+      affiliation: ""
+    - name: "Ruben Dries"
+      affiliation: ""

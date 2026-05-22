@@ -1,0 +1,24 @@
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="hero-eyebrow">New England Computational Biology Symposium</p>
+    <h1 class="hero-title">NECB <span class="hero-year">2026</span></h1>
+    <p class="hero-meta">
+      <span><strong>{{ site.Params.conferenceDate }}</strong></span>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>{{ site.Params.venueName }}</span>
+    </p>
+    <p class="hero-pitch">
+      A two-day symposium bringing the New England computational biology community together
+      to discuss generative AI for biology, spatial and single-cell omics, and agentic AI.
+    </p>
+    <div class="hero-cta">
+      {{ if site.Params.registrationURL }}
+        <a class="btn btn-primary" href="{{ site.Params.registrationURL }}" target="_blank" rel="noopener">Register</a>
+      {{ else }}
+        <span class="badge badge-soon">{{ site.Params.registrationStatus }}</span>
+      {{ end }}
+      <a class="btn btn-ghost" href="#about">Learn more →</a>
+    </div>
+  </div>
+</section>

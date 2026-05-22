@@ -1,0 +1,10 @@
+items:
+  - title: "Generative AI · Virtual Cells · Protein Design"
+    description: "Foundation models for biology, generative approaches to virtual cell simulation, and computational protein design."
+    icon: "🧬"
+  - title: "Spatial & Single-Cell Omics"
+    description: "Methods, models, and applications at the single-cell and spatial transcriptomics frontier."
+    icon: "🔬"
+  - title: "Agentic AI for Biology"
+    description: "Autonomous agents, reasoning systems, and agent–scientist collaboration for biological discovery."
+    icon: "🤖"

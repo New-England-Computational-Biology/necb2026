@@ -1,0 +1,21 @@
+<section class="section" id="program">
+  <div class="container">
+    <h2 class="section-title">Program at a glance</h2>
+    <p class="section-sub">{{ site.Data.program.note }}</p>
+    <div class="program-grid">
+      {{ range site.Data.program.days }}
+      <div class="program-day">
+        <h3 class="program-day-title">{{ .label }}</h3>
+        <ul class="program-list">
+          {{ range .sessions }}
+          <li class="program-row program-row--{{ .kind }}">
+            <span class="program-time">{{ .time }}</span>
+            <span class="program-title">{{ .title }}</span>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

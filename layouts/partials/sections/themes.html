@@ -1,0 +1,15 @@
+<section class="section section-alt" id="themes">
+  <div class="container">
+    <h2 class="section-title">Themes</h2>
+    <p class="section-sub">NECB 2026 will focus on three intersecting frontiers.</p>
+    <div class="card-grid grid-3">
+      {{ range site.Data.themes.items }}
+      <article class="card theme-card">
+        <div class="theme-icon" aria-hidden="true">{{ .icon }}</div>
+        <h3 class="card-title">{{ .title }}</h3>
+        <p class="card-body">{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>

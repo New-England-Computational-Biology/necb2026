@@ -1,0 +1,17 @@
+<section class="section section-alt" id="speakers">
+  <div class="container">
+    <h2 class="section-title">Speakers</h2>
+    <p class="section-sub">
+      Confirmed speakers will be announced here as invitations are accepted. Stay tuned.
+    </p>
+    <div class="card-grid grid-4 speakers-placeholder">
+      {{ range seq 8 }}
+      <div class="card speaker-card speaker-card--placeholder" aria-hidden="true">
+        <div class="speaker-avatar"></div>
+        <div class="speaker-name-bar"></div>
+        <div class="speaker-affil-bar"></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

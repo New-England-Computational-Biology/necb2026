@@ -1,0 +1,67 @@
+baseURL: "https://necb2026.netlify.app/"
+title: "NECB 2026"
+languageCode: "en-us"
+defaultContentLanguage: "en"
+
+enableRobotsTXT: true
+enableEmoji: true
+enableGitInfo: false
+
+disableKinds:
+  - taxonomy
+  - term
+
+permalinks:
+  page: "/:slug/"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+
+params:
+  description: "New England Computational Biology Symposium 2026 — Oct 1–2, Cambridge, MA"
+  author: "NECB Organizing Committee"
+  contactEmail: "necb2026@example.org"
+  conferenceDate: "October 1–2, 2026"
+  conferenceLocation: "Cambridge, MA"
+  venueName: "Microsoft Research Cambridge (tentative)"
+  registrationStatus: "Registration via ISCB — coming soon"
+  registrationURL: ""
+  logo: "img/logo.svg"
+  favicon: "img/favicon.svg"
+  ogImage: "img/og-image.png"
+
+  social:
+    twitter: ""
+    linkedin: ""
+    github: ""
+
+menus:
+  main:
+    - name: About
+      url: "#about"
+      weight: 10
+    - name: Themes
+      url: "#themes"
+      weight: 20
+    - name: Program
+      url: "#program"
+      weight: 30
+    - name: Speakers
+      url: "#speakers"
+      weight: 40
+    - name: Venue
+      url: "#venue"
+      weight: 50
+    - name: Organizers
+      url: "#organizers"
+      weight: 60
+    - name: Sponsors
+      url: "#sponsors"
+      weight: 70
+    - name: Contact
+      url: "#contact"
+      weight: 80
