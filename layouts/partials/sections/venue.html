@@ -3,13 +3,21 @@
     <h2 class="section-title">Venue & travel</h2>
     <div class="venue-card">
       <h3 class="venue-name">{{ site.Params.venueName }}</h3>
-      <p class="venue-loc">Cambridge, Massachusetts</p>
+      <p class="venue-loc">{{ with site.Params.venueAddress }}{{ . }}{{ else }}Cambridge, Massachusetts{{ end }}</p>
+      <ul class="venue-facts">
+        <li><strong>Format:</strong> {{ site.Params.format }}</li>
+        <li><strong>Capacity:</strong> up to {{ site.Params.attendeeCap }} attendees</li>
+        <li><strong>Dates:</strong> {{ site.Params.conferenceDate }}</li>
+      </ul>
       <p>
-        The symposium will be held at Microsoft Research Cambridge (tentative).
+        The symposium will be held at <strong>Microsoft Research Cambridge</strong>, in the
+        heart of Kendall Square — a short walk from the MBTA Red Line and easily accessible
+        from across the Boston area and beyond.
+      </p>
+      <p>
         Detailed travel directions, accommodation suggestions, and special-rate hotel
         information will be posted here closer to the conference dates.
       </p>
-      <p class="venue-note"><em>Venue and details subject to change.</em></p>
     </div>
   </div>
 </section>

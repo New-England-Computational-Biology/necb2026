@@ -27,7 +27,10 @@ params:
   contactEmail: "necb2026@example.org"
   conferenceDate: "October 1–2, 2026"
   conferenceLocation: "Cambridge, MA"
-  venueName: "Microsoft Research Cambridge (tentative)"
+  venueName: "Microsoft Research Cambridge"
+  venueAddress: "One Memorial Drive, Cambridge, MA 02142"
+  attendeeCap: 350
+  format: "In-person only"
   registrationStatus: "Registration via ISCB — coming soon"
   registrationURL: ""
   logo: "img/logo.svg"
