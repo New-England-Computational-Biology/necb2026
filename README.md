@@ -39,7 +39,8 @@ necb-website/
 ├── assets/css/main.css           # all styling, palette C ("Modern Bio-Tech")
 ├── static/img/                   # logo, favicon
 ├── static/js/nav.js              # mobile nav toggle
-├── netlify.toml                  # Netlify build config
+├── static/CNAME                  # custom domain for GitHub Pages
+├── .github/workflows/hugo.yml    # GitHub Actions build + deploy to Pages
 └── .gitignore
 ```
 
@@ -72,11 +73,24 @@ When ISCB registration is ready: set `params.registrationURL` in `config/_defaul
 
 ## Deploy
 
-1. Push to a private GitHub repo
-2. Sign in to [netlify.com](https://www.netlify.com), "Add new site" → "Import from Git"
-3. Pick the repo, leave the auto-detected settings (they come from `netlify.toml`)
-4. Site goes live at `<random>.netlify.app`; rename in Site settings to `necb2026.netlify.app`
-5. When ready, point a custom domain (e.g. `necb2026.org`) at Netlify
+The site is hosted on **GitHub Pages** at https://newenglandcompbio.org/.
+
+Every push to `main` triggers `.github/workflows/hugo.yml`, which:
+1. Installs Hugo extended
+2. Builds the site with `hugo --gc --minify`
+3. Uploads the `public/` artifact
+4. Deploys to GitHub Pages
+
+You can watch builds under the **Actions** tab. Manual re-deploy: Actions → "Deploy Hugo site to Pages" → "Run workflow".
+
+### Repo settings (one-time)
+- **Settings → Pages**: Source = *GitHub Actions* (not "Deploy from a branch")
+- **Settings → Pages → Custom domain**: `newenglandcompbio.org` (the `static/CNAME` file in this repo enforces this)
+- **Enforce HTTPS**: enabled (Let's Encrypt cert auto-provisioned by GitHub)
+
+### DNS (at the registrar — GoDaddy)
+- Apex `newenglandcompbio.org` → A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `www` subdomain → CNAME `new-england-computational-biology.github.io`
 
 ## Open items / TBD
 
